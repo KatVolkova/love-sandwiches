@@ -27,6 +27,7 @@ def get_sales_data():
 
 def validate_data(values):
     try:
+        [int(values) for value in values]
         if len(values) != 6:
             raise ValueError(f'Exactly six values required,you  {len(values)}')
     except ValueError as e:
